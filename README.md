@@ -9,24 +9,15 @@
 - OpenCV
 - NumPy
 
-## 📁 Cấu trúc thư mục
-project/
-├── photo/ # Thư mục chứa các thư mục con theo tên người, mỗi thư mục chứa ảnh khuôn mặt
-│ ├── Ronaldo/
-│ │ └── ronaldo.jpg
-│ └── Messi/
-│ └── messi.png
-├── main.py # File chính chạy chương trình
-├── requirements.txt # Danh sách thư viện cần thiết
-└── .gitignore # Loại trừ venv và các file không cần thiết
+
 
 
 ## 🚀 Hướng dẫn sử dụng cài môi trường ảo
 
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
+- python -m venv venv
+- venv\Scripts\activate
+- pip install -r requirements.txt
+- python main.py
 
 
 
