@@ -13,7 +13,8 @@
 
 
 ## 🚀 Hướng dẫn sử dụng cài môi trường ảo
-
+- Tải dlib: dlib‑19.22.99‑cp310‑cp310‑win_amd64.whl
+- Cài bằng lệnh: pip install path\to\file.whl
 - python -m venv venv
 - venv\Scripts\activate
 - pip install -r requirements.txt
