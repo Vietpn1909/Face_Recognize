@@ -1,0 +1,30 @@
+# Bỏ qua môi trường ảo
+venv/
+ENV/
+env/
+.venv/
+
+# Bỏ qua file cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Bỏ qua file log và tạm
+*.log
+*.tmp
+
+# Bỏ qua file hệ thống (Windows/macOS)
+.DS_Store
+Thumbs.db
+
+# Bỏ qua dlib nếu là folder mã nguồn được clone hoặc build
+dlib/
+
+# Bỏ qua file xuất IDE (VSCode, PyCharm, v.v.)
+.vscode/
+.idea/
+
+# Bỏ qua các file xuất model (nếu có)
+*.h5
+*.pth
+*.pkl
