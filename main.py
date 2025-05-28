@@ -2,28 +2,31 @@ import face_recognition
 import cv2
 import numpy as np
 import os
+import pickle
 
 # Thư mục gốc chứa các thư mục tên người
-DIR = 'photo'
+# DIR = 'photo'
+with open("encoding.pkl", "rb") as f:
+    data = pickle.load(f)
 
-known_face_encodings = []
-known_face_names = []
+known_face_encodings = data["encodings"]
+known_face_names = data["names"]
 
-def Load_Photo():
-    # Duyệt từng thư mục con trong photo
-    for person_name in os.listdir(DIR):
-        person_folder = os.path.join(DIR, person_name)
+# def Load_Photo():
+#     # Duyệt từng thư mục con trong photo
+#     for person_name in os.listdir(DIR):
+#         person_folder = os.path.join(DIR, person_name)
 
-        # Duyệt từng ảnh trong thư mục con
-        for filename in os.listdir(person_folder):
-            if filename.endswith(('.jpg', '.jpeg', '.png')):
-                image_path = os.path.join(person_folder, filename)
-                image = face_recognition.load_image_file(image_path)
+#         # Duyệt từng ảnh trong thư mục con
+#         for filename in os.listdir(person_folder):
+#             if filename.endswith(('.jpg', '.jpeg', '.png')):
+#                 image_path = os.path.join(person_folder, filename)
+#                 image = face_recognition.load_image_file(image_path)
                     
-                encodings = face_recognition.face_encodings(image)
+#                 encodings = face_recognition.face_encodings(image)
 
-                known_face_encodings.append(encodings[0])
-                known_face_names.append(person_name)
+#                 known_face_encodings.append(encodings[0])
+#                 known_face_names.append(person_name)
                 
 def Web_cam():
     # Mở webcam
@@ -106,8 +109,8 @@ def Image(path):
         
                 
 if __name__ == '__main__':
-    Load_Photo()
-    
+    # print(type(known_face_encodings[0]))
+    # print(type(known_face_names[0]))
     x = input('Choose (1 = webcam, 2 = photo): ')
     if x == '1':
         Web_cam()
