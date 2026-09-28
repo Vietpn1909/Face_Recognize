@@ -1,0 +1,9 @@
+﻿face_recognition==1.3.0
+dlib
+opencv-python==4.11.0.86
+numpy==1.26.4
+pandas==2.2.3
+openpyxl
+Pillow==11.2.1
+matplotlib==3.10.1  # Nếu cần visualize data
+tqdm==4.67.1  # Nếu cần progress bars
